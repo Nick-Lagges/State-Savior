@@ -70,14 +70,19 @@ def display_first_course(screen):
                 if is_button_clicked(mouse_pos, button1_rect):
                     print("Option 1 selected!")
                 elif is_button_clicked(mouse_pos, button2_rect):
-                    display_economic_1(screen)
+                    display_economic(screen)
             elif event.type == KEYDOWN and event.key == K_ESCAPE:
                 pygame.quit()
                 sys.exit()
 
 
-def display_economic_1(screen):
+def display_economic(screen):
     screen.fill(WHITE)
+
+    background = pygame.image.load("economyDown.jpg").convert()
+
+    screen.blit(background, (0,0))
+    
     draw_text("How should the country proceed?", FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
     
     button1_rect = pygame.Rect(SCREEN_WIDTH // 4 - OPT1_WIDTH // 2, SCREEN_HEIGHT // 2 - 50, OPT1_WIDTH, BUTTON_HEIGHT)
@@ -296,12 +301,122 @@ def display_second_course_E(screen):
             elif event.type == pygame.MOUSEBUTTONDOWN:
                 mouse_pos = pygame.mouse.get_pos()
                 if is_button_clicked(mouse_pos, button1_rect):
-                    print("Option 1 selected!")
+                    display_refugee(screen)
                 elif is_button_clicked(mouse_pos, button2_rect):
-                    display_economic_1(screen)
+                    display_economic(screen)
             elif event.type == KEYDOWN and event.key == K_ESCAPE:
                 pygame.quit()
                 sys.exit()
+
+def display_refugee(screen):
+    screen.fill(WHITE)
+
+    background = pygame.image.load("economyDown.jpg").convert()
+
+    screen.blit(background, (0,0))
+    
+    draw_text("How should the country proceed?", FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
+    
+    button1_rect = pygame.Rect(SCREEN_WIDTH // 4 - OPT1_WIDTH // 2, SCREEN_HEIGHT // 2 - 50, OPT1_WIDTH, BUTTON_HEIGHT)
+    button2_rect = pygame.Rect(3 * SCREEN_WIDTH // 4 - OPT2_WIDTH // 2, SCREEN_HEIGHT // 2 - 50, OPT2_WIDTH, BUTTON_HEIGHT)
+    
+    opt1 = Button(OPT_FONT, RED, button1_rect.x, button1_rect.y, OPT1_WIDTH, BUTTON_HEIGHT, "International Cooperation")
+    opt2 = Button(OPT_FONT, GREEN, button2_rect.x, button2_rect.y, OPT2_WIDTH, BUTTON_HEIGHT, "Internal Empowerment")
+
+    opt1.draw(screen)
+    opt2.draw(screen)
+    
+    pygame.display.update()
+    
+    while True:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit()
+            elif event.type == pygame.MOUSEBUTTONDOWN:
+                mouse_pos = pygame.mouse.get_pos()
+                if is_button_clicked(mouse_pos, button1_rect):
+                    display_international_coop(screen)
+                elif is_button_clicked(mouse_pos, button2_rect):
+                    display_internal_emp(screen)
+            elif event.type == KEYDOWN and event.key == K_ESCAPE:
+                pygame.quit()
+                sys.exit()
+
+def display_international_coop(screen):
+    screen.fill(WHITE)
+
+    background = pygame.image.load("economyDown.jpg").convert()
+
+    screen.blit(background, (0,0))
+    
+    draw_text("How should Turkey go about international affairs?", FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
+    
+    button1_rect = pygame.Rect(SCREEN_WIDTH // 4 - OPT1_WIDTH // 2, SCREEN_HEIGHT // 2 - 50, OPT1_WIDTH, BUTTON_HEIGHT)
+    button2_rect = pygame.Rect(3 * SCREEN_WIDTH // 4 - OPT2_WIDTH // 2, SCREEN_HEIGHT // 2 - 50, OPT2_WIDTH, BUTTON_HEIGHT)
+    
+    opt1 = Button(OPT_FONT, RED, button1_rect.x, button1_rect.y, OPT1_WIDTH, BUTTON_HEIGHT, "Work with United Nations")
+    opt2 = Button(OPT_FONT, GREEN, button2_rect.x, button2_rect.y, OPT2_WIDTH, BUTTON_HEIGHT, "Address Syrian Issues")
+
+    opt1.draw(screen)
+    opt2.draw(screen)
+    
+    pygame.display.update()
+    
+    while True:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit()
+            elif event.type == pygame.MOUSEBUTTONDOWN:
+                mouse_pos = pygame.mouse.get_pos()
+                if is_button_clicked(mouse_pos, button1_rect):
+                    print("h")
+                    #display_economic_stim(screen)
+                elif is_button_clicked(mouse_pos, button2_rect):
+                    print("d")
+                    #display_economic_aust(screen)
+            elif event.type == KEYDOWN and event.key == K_ESCAPE:
+                pygame.quit()
+                sys.exit()
+
+def display_internal_emp(screen):
+    screen.fill(WHITE)
+
+    background = pygame.image.load("economyDown.jpg").convert()
+
+    screen.blit(background, (0,0))
+    
+    draw_text("How should Turkey support refugees within the country?", FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
+    
+    button1_rect = pygame.Rect(SCREEN_WIDTH // 4 - OPT1_WIDTH // 2, SCREEN_HEIGHT // 2 - 50, OPT1_WIDTH, BUTTON_HEIGHT)
+    button2_rect = pygame.Rect(3 * SCREEN_WIDTH // 4 - OPT2_WIDTH // 2, SCREEN_HEIGHT // 2 - 50, OPT2_WIDTH, BUTTON_HEIGHT)
+    
+    opt1 = Button(OPT_FONT, RED, button1_rect.x, button1_rect.y, OPT1_WIDTH, BUTTON_HEIGHT, "Improve Opportunities")
+    opt2 = Button(OPT_FONT, GREEN, button2_rect.x, button2_rect.y, OPT2_WIDTH, BUTTON_HEIGHT, "Promote Acceptance")
+
+    opt1.draw(screen)
+    opt2.draw(screen)
+    
+    pygame.display.update()
+    
+    while True:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit()
+            elif event.type == pygame.MOUSEBUTTONDOWN:
+                mouse_pos = pygame.mouse.get_pos()
+                if is_button_clicked(mouse_pos, button1_rect):
+                    print("d")
+                    #display_economic_stim(screen)
+                elif is_button_clicked(mouse_pos, button2_rect):
+                    print("d")
+                    #display_economic_aust(screen)
+            elif event.type == KEYDOWN and event.key == K_ESCAPE:
+                pygame.quit()
+                sys.exit()
+
         
 # Function to display main screen
 def display_main_screen(screen):
