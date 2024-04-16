@@ -2,7 +2,7 @@ import pygame
 from pygame.locals import *
 import sys
 from button import Button
-from countryStats import CountryStats
+from countryStats import Country
 
 # Initialize Pygame
 pygame.init()
@@ -44,7 +44,15 @@ EU = 2
 D = 3
 
 #Class Variables
-reform_choice = False
+REFORM = False
+ALLIES = False
+WALK = False
+RELATIONS = False
+INTERNAL = False
+TAXES = False
+INVESTMENT = False
+SYRIA = False
+SPENDING = False
 
 # Country Statistics
 
@@ -55,7 +63,7 @@ DIPLOMACY = 55
 INFRASTRUCTURE = 60
 DEFENSE = 65
 
-turkey = CountryStats(ECONOMIC_STRENGTH, QUALITY_OF_LIFE, POLITICAL_STABILITY, DIPLOMACY, INFRASTRUCTURE, DEFENSE)
+turkey = Country(ECONOMIC_STRENGTH, QUALITY_OF_LIFE, POLITICAL_STABILITY, DIPLOMACY, INFRASTRUCTURE, DEFENSE, REFORM, ALLIES, WALK, RELATIONS, INTERNAL, TAXES, INVESTMENT, SYRIA, SPENDING)
 
 # Function to draw text on the screen
 def draw_text(text, font, color, surface, x, y):
@@ -315,6 +323,8 @@ def display_investment_result(screen):
     
     draw_text("You increased investment into the economy, stimulating growth in the short run.", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
 
+    turkey.INVESTMENT = True
+
     turkey.ECONOMIC_STRENGTH += 5
     
     button1_rect = pygame.Rect(SCREEN_WIDTH // 4 - OPT1_WIDTH // 2, SCREEN_HEIGHT // 2 - 50, OPT1_WIDTH, BUTTON_HEIGHT)
@@ -409,6 +419,8 @@ def display_reduce_spend_result(screen):
     background = pygame.image.load("economyDown.jpg").convert()
     screen.blit(background, (0,0))
 
+    turkey.SPENDING = True
+
     turkey.ECONOMIC_STRENGTH += 5
     turkey.QUALITY_OF_LIFE -= 3
     
@@ -441,6 +453,8 @@ def display_tax_result(screen):
     screen.fill(WHITE)
     background = pygame.image.load("economyDown.jpg").convert()
     screen.blit(background, (0,0))
+
+    turkey.TAXES = True
 
     turkey.ECONOMIC_STRENGTH += 5
     turkey.INFRASTRUCTURE += 3
@@ -546,6 +560,17 @@ def display_UN_result(screen):
     turkey.DIPLOMACY += 7
     turkey.POLITICAL_STABILITY += 2
     turkey.INFRASTRUCTURE += 1
+
+    if turkey.REFORM:
+        draw_text("You have decided to address the refugee crisis by addressing the Syrian issue at its", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
+        draw_text("core. This approach will take time, but citizens are already starting to see improvements.", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 100)
+        draw_text("Additionally, your committment to finding a solution to the problem has put you in good", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 150)
+        draw_text("standing with the international community.", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 200)
+    elif not turkey.REFORM:
+        draw_text("You have decided to address the refugee crisis by consulting the United Nations.", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
+        draw_text("Since you have previously decided to reform to European Union Standards, the United", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 100)
+        draw_text("Nations is more likely to assist Turkey. ", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 150)
+        draw_text("standing with the international community.", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 200)
     
     draw_text("Explain UN result", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
     draw_text("Explain UN result", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 100)
@@ -577,18 +602,14 @@ def display_syrian_result(screen):
     background = pygame.image.load("economyDown.jpg").convert()
     screen.blit(background, (0,0))
 
+    turkey.SYRIA = True
+
     turkey.DIPLOMACY += 5
     turkey.DEFENSE -= 2
 
-    if reform_choice == True:
-        draw_text("You have decided to address the refugee crisis by addressing the Syrian issue at its", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
-        draw_text("core. This approach will take time, but citizens are already starting to see improvements.", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 100)
-        draw_text("Additionally, your committment to finding a solution to the problem has put you in good", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 150)
-        draw_text("standing with the international community.", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 200)
-    else:
-        draw_text("You have decided to address the refugee crisis by addressing the Syrian issue at its", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
-        draw_text("core. This is a solid approach and shows your commitment to the issue. However, geopolitical", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 100)
-        draw_text("issues and strains in your relationship with neighboring countries have slowed down results.", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 150)
+    draw_text("You have decided to address the refugee crisis by addressing the Syrian issue at its", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
+    draw_text("core. This is a solid approach and shows your commitment to the issue. However, geopolitical", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 100)
+    draw_text("issues and strains in your relationship with neighboring countries have slowed down results.", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 150)
 
     button1_rect = pygame.Rect(SCREEN_WIDTH // 4 - OPT1_WIDTH // 2, SCREEN_HEIGHT // 2 - 50, OPT1_WIDTH, BUTTON_HEIGHT)
     
@@ -615,6 +636,8 @@ def display_internal_emp(screen):
     screen.fill(WHITE)
     background = pygame.image.load("economyDown.jpg").convert()
     screen.blit(background, (0,0))
+
+    turkey.INTERNAL = True
     
     draw_text("How should Turkey support refugees within the country?", FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
     
@@ -762,7 +785,7 @@ def display_reform(screen):
     opt2.draw(screen)
     
     pygame.display.update()
-    reform_choice = True
+    turkey.REFORM = True
     while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -885,14 +908,16 @@ def display_alliances_result(screen):
     background = pygame.image.load("economyDown.jpg").convert()
     screen.blit(background, (0,0))
 
+    turkey.ALLIES = True
+
     turkey.DIPLOMACY += 5
     turkey.DEFENSE += 3
     turkey.POLITICAL_STABILITY += 2
     turkey.QUALITY_OF_LIFE -= 2
     
-    draw_text("You have built back alliances with the UN through negotiations. While maintaining some traditional", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
+    draw_text("You have built back alliances with the EU members through negotiations. While maintaining some traditional", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
     draw_text("practices, you've made commitments to change key issues regarding human rights. This balanced", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 100)
-    draw_text("approach has improved your standing with the UN, while keeping political opponents relatively at bay.", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 150)
+    draw_text("approach has improved your standing with the EU, while keeping political opponents relatively at bay.", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 150)
 
     button1_rect = pygame.Rect(SCREEN_WIDTH // 4 - OPT1_WIDTH // 2, SCREEN_HEIGHT // 2 - 50, OPT1_WIDTH, BUTTON_HEIGHT)
     
@@ -919,6 +944,8 @@ def display_alternatives_result(screen):
     screen.fill(WHITE)
     background = pygame.image.load("economyDown.jpg").convert()
     screen.blit(background, (0,0))
+
+    turkey.WALK = True
 
     turkey.DIPLOMACY += 2
     turkey.POLITICAL_STABILITY += 3
@@ -988,6 +1015,8 @@ def display_relations(screen):
     screen.blit(background, (0,0))
     
     draw_text("How should the country improve its relations?", FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
+
+    turkey.RELATIONS = True
     
     button1_rect = pygame.Rect(SCREEN_WIDTH // 4 - OPT1_WIDTH // 2, SCREEN_HEIGHT // 2 - 50, OPT1_WIDTH, BUTTON_HEIGHT)
     button2_rect = pygame.Rect(3 * SCREEN_WIDTH // 4 - OPT2_WIDTH // 2, SCREEN_HEIGHT // 2 - 50, OPT2_WIDTH, BUTTON_HEIGHT)
