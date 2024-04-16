@@ -562,19 +562,25 @@ def display_UN_result(screen):
     turkey.INFRASTRUCTURE += 1
 
     if turkey.REFORM:
-        draw_text("You have decided to address the refugee crisis by addressing the Syrian issue at its", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
-        draw_text("core. This approach will take time, but citizens are already starting to see improvements.", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 100)
-        draw_text("Additionally, your committment to finding a solution to the problem has put you in good", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 150)
-        draw_text("standing with the international community.", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 200)
-    elif not turkey.REFORM:
         draw_text("You have decided to address the refugee crisis by consulting the United Nations.", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
         draw_text("Since you have previously decided to reform to European Union Standards, the United", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 100)
-        draw_text("Nations is more likely to assist Turkey. ", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 150)
-        draw_text("standing with the international community.", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 200)
-    
-    draw_text("Explain UN result", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
-    draw_text("Explain UN result", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 100)
-    draw_text("Explain UN result", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 150)
+        draw_text("Nations is more likely to support Turkey. With the aid from the UN, refugees have", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 150)
+        draw_text("seen improvements in living conditions and quality of life.", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 200)
+    elif turkey.ALLIES:
+        draw_text("You have decided to address the refugee crisis by consulting the United Nations.", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
+        draw_text("This approach will take time, but citizens are already starting to see improvements due", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 100)
+        draw_text("to the aid from neighboring allies. Although the UN is not yet directly involved, they", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 150)
+        draw_text("have made a statement promising future support for the refugees in Turkey.", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 200)
+    elif turkey.WALK:
+        draw_text("You have decided to address the refugee crisis by consulting the United Nations. Since you", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
+        draw_text("have previously walked away from attempts to join the European Union, EU countries in the", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 100)
+        draw_text("UN have been less responsive to Turkey's calls for aid. You hope other opportunities can help", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 150)
+        draw_text("improve the well being of the refugees, but for now their quality of life only slightly improves.", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 200)
+    else:
+        draw_text("You have decided to address the refugee crisis by consulting the United Nations. Due to", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
+        draw_text("Turkey's complex relationship with the UN, they have been slightly receptive to your call", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 100)
+        draw_text("for help. They have supplied aid, but not as much as necessary to greatly improve refugee", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 150)
+        draw_text("quality of life.", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 200)
 
     button1_rect = pygame.Rect(SCREEN_WIDTH // 4 - OPT1_WIDTH // 2, SCREEN_HEIGHT // 2 - 50, OPT1_WIDTH, BUTTON_HEIGHT)
     
