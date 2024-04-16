@@ -1174,18 +1174,24 @@ def display_military_result(screen):
 
     if turkey.REFORM or turkey.ALLIES:
         if turkey.SPENDING:
-            #fine
+            draw_text("Because you have already chosen to reduce spending, your military is", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
+            draw_text("not at full strength. However, due to your improved relations with EU members,", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 100)
+            draw_text("they have committed to helping your cause. With their help, your counterterrorism ", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 150)
+            draw_text("efforts have seen some success. ", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 200)
         else:
-            #best
+            draw_text("Due to your improved relations with EU members, they have committed to", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
+            draw_text("helping your cause. With your newfound allies, along with the Turkish", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 100)
+            draw_text("military, your counterterrorism efforts have seen great success!", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 150)
+            draw_text("Your citizens are more confident in their safety than ever before.", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 200)
     elif turkey.SPENDING:
-        #bad
+        draw_text("Because you have already chosen to reduce spending, your military is", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
+        draw_text("not at full strength. Because of this, your military has been unable to", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 100)
+        draw_text("prevent multiple PPK attacks.", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 150)
     else:
-        #fine
+        draw_text("You have chosen to put a stop to the terrorist demonstrations in Turkey.", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
+        draw_text("Although there has been definite improvements, the PKK is still a dominant", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 100)
+        draw_text("force. The citizens of Turkey are beginning to feel a bit safer.", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 150)
     
-    draw_text("Explain this result", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
-    draw_text("Explain this result", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 100)
-    draw_text("Explain this result", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 150)
-
     button1_rect = pygame.Rect(SCREEN_WIDTH // 4 - OPT1_WIDTH // 2, SCREEN_HEIGHT // 2 - 50, OPT1_WIDTH, BUTTON_HEIGHT)
     
     opt1 = Button(OPT_FONT, RED, button1_rect.x, button1_rect.y, OPT1_WIDTH, BUTTON_HEIGHT, "Next")
