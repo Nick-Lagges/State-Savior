@@ -607,9 +607,15 @@ def display_syrian_result(screen):
     turkey.DIPLOMACY += 5
     turkey.DEFENSE -= 2
 
-    draw_text("You have decided to address the refugee crisis by addressing the Syrian issue at its", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
-    draw_text("core. This is a solid approach and shows your commitment to the issue. However, geopolitical", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 100)
-    draw_text("issues and strains in your relationship with neighboring countries have slowed down results.", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 150)
+    if turkey.RELATIONS:
+        draw_text("You have decided to address the refugee crisis by addressing the Syrian issue at its", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
+        draw_text("core. This is a solid approach and shows your commitment to the issue. Because of your", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 100)
+        draw_text("previous commitments, your relationship with Syria has improved, resulting to them being", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 150)
+        draw_text("receptive, helping greatly to your efforts.", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 150)
+    else:
+        draw_text("You have decided to address the refugee crisis by addressing the Syrian issue at its", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
+        draw_text("core. This is a solid approach and shows your commitment to the issue. However, geopolitical", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 100)
+        draw_text("issues and strains in your relationship with neighboring countries have slowed down results.", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 150)
 
     button1_rect = pygame.Rect(SCREEN_WIDTH // 4 - OPT1_WIDTH // 2, SCREEN_HEIGHT // 2 - 50, OPT1_WIDTH, BUTTON_HEIGHT)
     
