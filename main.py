@@ -950,7 +950,7 @@ def display_alternatives_result(screen):
     turkey.DIPLOMACY += 2
     turkey.POLITICAL_STABILITY += 3
     
-    draw_text("You have decided to step away from the UN and explore alternatives. Although this", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
+    draw_text("You have decided to step away from the EU and explore alternatives. Although this", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
     draw_text("allows for some more innovation and flexibility, this decision has put you at odds with", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 100)
     draw_text("the internatinoal community. This durastic policy choice has sparked opposition to", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 150)
     draw_text("criticize your decision making.", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 200)
