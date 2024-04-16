@@ -109,9 +109,10 @@ def display_pre_screen(screen):
     draw_text("Defence: ", FONT, BLACK, screen, SCREEN_WIDTH - (SCREEN_WIDTH // 4), SCREEN_HEIGHT - 300)
     draw_text("Turkeys defence decisions are determined by both internal and external factors.", FONT2, BLACK, screen, SCREEN_WIDTH - (SCREEN_WIDTH // 4), SCREEN_HEIGHT - 275)
     draw_text("The Kurdistan Workers' Party (PKK) is a militant terrorist organization causing", FONT2, BLACK, screen, SCREEN_WIDTH - (SCREEN_WIDTH // 4), SCREEN_HEIGHT - 250)
-    draw_text("uprises throughout Turkey, leading to civil unrest and instability. While", FONT2, BLACK, screen, SCREEN_WIDTH - (SCREEN_WIDTH // 4), SCREEN_HEIGHT - 225)
-    draw_text("the country is dealing with this issue, Turkey is involved abroad in a Syrian", FONT2, BLACK, screen, SCREEN_WIDTH - (SCREEN_WIDTH // 4), SCREEN_HEIGHT - 200)
-    draw_text("conflict. While Turkey works to handle both these situations, maintaining ", FONT2, BLACK, screen, SCREEN_WIDTH - (SCREEN_WIDTH // 4), SCREEN_HEIGHT - 175)
+    draw_text("uprises throughout Turkey, leading to civil unrest and instability. Additionally, ", FONT2, BLACK, screen, SCREEN_WIDTH - (SCREEN_WIDTH // 4), SCREEN_HEIGHT - 225)
+    draw_text("Islamic extremism has plagued the citizens of Turkey. While the country is", FONT2, BLACK, screen, SCREEN_WIDTH - (SCREEN_WIDTH // 4), SCREEN_HEIGHT - 225)
+    draw_text("handling both of these issues, Turkey is also involved abroad in a Syrian", FONT2, BLACK, screen, SCREEN_WIDTH - (SCREEN_WIDTH // 4), SCREEN_HEIGHT - 200)
+    draw_text("conflict. While Turkey works to navigate their many challenges, maintaining ", FONT2, BLACK, screen, SCREEN_WIDTH - (SCREEN_WIDTH // 4), SCREEN_HEIGHT - 175)
     draw_text("international relationships is key.", FONT2, BLACK, screen, SCREEN_WIDTH - (SCREEN_WIDTH // 4), SCREEN_HEIGHT - 150)
     
     button1_rect = pygame.Rect(SCREEN_WIDTH -50 - BUTTON_WIDTH // 2, SCREEN_HEIGHT -10, BUTTON_WIDTH -50, BUTTON_HEIGHT -50)
