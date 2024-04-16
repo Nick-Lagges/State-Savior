@@ -617,7 +617,7 @@ def display_syrian_result(screen):
         draw_text("You have decided to address the refugee crisis by addressing the Syrian issue at its", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
         draw_text("core. This is a solid approach and shows your commitment to the issue. Because of your", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 100)
         draw_text("previous commitments, your relationship with Syria has improved, resulting to them being", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 150)
-        draw_text("receptive, helping greatly to your efforts.", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 150)
+        draw_text("receptive, helping greatly to your efforts.", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 200)
     else:
         draw_text("You have decided to address the refugee crisis by addressing the Syrian issue at its", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
         draw_text("core. This is a solid approach and shows your commitment to the issue. However, geopolitical", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 100)
@@ -1098,6 +1098,13 @@ def display_strengthen_econ_result(screen):
     turkey.ECONOMIC_STRENGTH += 4
     turkey.DIPLOMACY += 7
     turkey.POLITICAL_STABILITY += 2
+
+    if turkey.TAXES:
+        #alright
+    elif turkey.INVEST:
+        #best
+    else:
+        #good
     
     draw_text("You have chosen to increase economic interdependence with neighboring countries", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
     draw_text("This decision has built mutural trust with your neighbors. However, the issues", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 100)
@@ -1164,7 +1171,16 @@ def display_military_result(screen):
 
     turkey.DEFENSE += 8
     turkey.POLITICAL_STABILITY += 3
-    
+
+    if turkey.REFORM or turkey.ALLIES:
+        if turkey.SPENDING:
+            #fine
+        else:
+            #best
+    elif turkey.SPENDING:
+        #bad
+    else:
+        #fine
     
     draw_text("Explain this result", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
     draw_text("Explain this result", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 100)
@@ -1198,6 +1214,11 @@ def display_causes_result(screen):
 
     turkey.DIPLOMACY -= 3
     turkey.POLITICAL_STABILITY += 4
+
+    if turkey.SYRIA:
+        #they r more willing to help seek out terrorism/not get in way
+    else:
+        
     
     draw_text("Explain this result", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
     draw_text("Explain this result", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 100)
