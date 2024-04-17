@@ -11,7 +11,7 @@ from countryStats import Country
 
 '''
 Utils:
- - text can go to col 85 before needing a new line
+ - text can go to col 80 before needing a new line
  - 
 '''
 
@@ -162,8 +162,8 @@ def display_course(screen):
     background = pygame.image.load("course.jpg").convert()
     screen.blit(background, (-220,0))
     draw_text("Decide which course of action to pursue.", FONT, WHITE, screen, SCREEN_WIDTH // 2, 50)
-    draw_text("Tip: The order in which you make decisions may affect the", FONT3, WHITE, screen, SCREEN_WIDTH // 2, 100)
-    draw_text("success of another.", FONT3, WHITE, screen, SCREEN_WIDTH // 2, 150)
+    draw_text("Tip: The order in which you make decisions may affect the success", FONT3, WHITE, screen, SCREEN_WIDTH // 2, 100)
+    draw_text("of another.", FONT3, WHITE, screen, SCREEN_WIDTH // 2, 150)
 
     button1_rect = pygame.Rect(0,0,1,1)
     button2_rect = pygame.Rect(0,0,1,1)
@@ -308,7 +308,7 @@ def display_economic_stim(screen):
     background = pygame.image.load("economyDown.jpg").convert()
     screen.blit(background, (0,0))
     
-    draw_text("How do you want to take stimulus measures?", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 50)
+    draw_text("How do you want to take stimulus measures?", FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
     
     button1_rect = pygame.Rect(SCREEN_WIDTH // 4 - OPT1_WIDTH // 2, SCREEN_HEIGHT // 2 - 50, OPT1_WIDTH, BUTTON_HEIGHT)
     button2_rect = pygame.Rect(3 * SCREEN_WIDTH // 4 - OPT2_WIDTH // 2, SCREEN_HEIGHT // 2 - 50, OPT2_WIDTH, BUTTON_HEIGHT)
@@ -341,7 +341,8 @@ def display_investment_result(screen):
     background = pygame.image.load("economyDown.jpg").convert()
     screen.blit(background, (0,0))
     
-    draw_text("You increased investment into the economy, stimulating growth in the short run.", OPT_FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
+    draw_text("You increased investment into the economy, stimulating growth in", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 50)
+    draw_text("the short run.", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 100)
 
     turkey.INVESTMENT = True
 
@@ -374,8 +375,8 @@ def display_cash_result(screen):
     background = pygame.image.load("economyDown.jpg").convert()
     screen.blit(background, (0,0))
     
-    draw_text("You made direct cash transfers to citizens, stimulating", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 50)
-    draw_text("economic growth in the short run.", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 100)
+    draw_text("You made direct cash transfers to citizens, stimulating economic", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 50)
+    draw_text("growth in the short run.", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 100)
 
     turkey.ECONOMIC_STRENGTH += 5
     
@@ -445,8 +446,8 @@ def display_reduce_spend_result(screen):
     turkey.ECONOMIC_STRENGTH += 5
     turkey.QUALITY_OF_LIFE -= 3
     
-    draw_text("You reduced government spending, cutting social welfare programs ", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 50)
-    draw_text("and pension reforms, causing protests and challenges to political ", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 100)
+    draw_text("You reduced government spending, cutting social welfare programs", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 50)
+    draw_text("pension reforms, causing protests and challenges to political", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 100)
     draw_text("stability. The reduced spending, on the other hand, has reduced", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 150)
     draw_text("governmental budget issues, improved investor confidence, and more", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 200)
     draw_text("stable inflation.", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 250)
@@ -485,9 +486,9 @@ def display_tax_result(screen):
     turkey.POLITICAL_STABILITY -=2
     
     draw_text("You increased taxes, sparking protests, challenging social cohesion", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 50)
-    draw_text("and political stability. Tax increases have reduced the overall demand", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 100)
-    draw_text("of the economy. However, governmental budget deficits have been cut", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 150)
-    draw_text("and inflation is at a more stable level.", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 200)
+    draw_text("and political stability. Tax increases have reduced the overall", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 100)
+    draw_text("demand of the economy. However, governmental budget deficits have", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 150)
+    draw_text("been cut and inflation is at a more stable level.", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 200)
 
     button1_rect = pygame.Rect(SCREEN_WIDTH // 4 - OPT1_WIDTH // 2, SCREEN_HEIGHT // 2 - 50, OPT1_WIDTH, BUTTON_HEIGHT)
     
@@ -586,15 +587,18 @@ def display_UN_result(screen):
     turkey.INFRASTRUCTURE += 1
 
     if turkey.REFORM:
-        draw_text("You have decided to address the refugee crisis by consulting the United Nations.", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 50)
-        draw_text("Since you have previously decided to reform to European Union Standards, the United", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 100)
-        draw_text("Nations is more likely to support Turkey. With the aid from the UN, refugees have", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 150)
-        draw_text("seen improvements in living conditions and quality of life.", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 200)
+        draw_text("You have decided to address the refugee crisis by consulting", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 50)
+        draw_text("the United Nations. Since you have previously decided to", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 100)
+        draw_text("reform to European Union Standards, the United Nations is more", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 150)
+        draw_text("likely to support Turkey. With the aid from the UN, refugees", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 200)
+        draw_text("have seen improvements in living conditions and quality of life.", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 250)
     elif turkey.ALLIES:
-        draw_text("You have decided to address the refugee crisis by consulting the United Nations.", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 50)
-        draw_text("This approach will take time, but citizens are already starting to see improvements due", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 100)
-        draw_text("to the aid from neighboring allies. Although the UN is not yet directly involved, they", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 150)
-        draw_text("have made a statement promising future support for the refugees in Turkey.", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 200)
+        draw_text("You have decided to address the refugee crisis by consulting", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 50)
+        draw_text("the United Nations. This approach will take time, but citizens", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 100)
+        draw_text("are already starting to see improvements due to the aid from", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 150)
+        draw_text("neighboring allies. Although the UN is not yet directly", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 200)
+        draw_text("involved, they have made a statement promising future support", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 250)
+        draw_text("for the refugees in Turkey.", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 300)
     elif turkey.WALK:
         draw_text("You have decided to address the refugee crisis by consulting the United Nations. Since you", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 50)
         draw_text("have previously walked away from attempts to join the European Union, EU countries in the", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 100)
