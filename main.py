@@ -1113,9 +1113,9 @@ def display_cultural_result(screen):
     turkey.POLITICAL_STABILITY -= 2
     
     draw_text("You have decided to use soft power and leverage cultural ties with", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 50)
-    draw_text("neighboring countries. Although this doesn't give immediate results,", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 100)
-    draw_text("this has improved your relationship with neighboring countries.", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 150)
-
+    draw_text("neighboring countries. Although this doesn't give immediate", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 100)
+    draw_text("results, this has improved your relationship with neighboring", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 150)
+    draw_text("countries.", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 200)
     button1_rect = pygame.Rect(SCREEN_WIDTH // 4 - OPT1_WIDTH // 2, SCREEN_HEIGHT // 2 - 50, OPT1_WIDTH, BUTTON_HEIGHT)
     
     opt1 = Button(OPT_FONT, RED, button1_rect.x, button1_rect.y, OPT1_WIDTH, BUTTON_HEIGHT, "Next")
@@ -1233,23 +1233,29 @@ def display_military_result(screen):
 
     if turkey.REFORM or turkey.ALLIES:
         if turkey.SPENDING:
-            draw_text("Because you have already chosen to reduce spending, your military is", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 50)
-            draw_text("not at full strength. However, due to your improved relations with EU members,", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 100)
-            draw_text("they have committed to helping your cause. With their help, your counterterrorism ", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 150)
-            draw_text("efforts have seen some success.", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 200)
+            draw_text("Because you have already chosen to reduce spending, your", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 50)
+            draw_text("military is not at full strength. However, due to your", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 100)
+            draw_text("improved relations with EU members, they have committed to", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 150)
+            draw_text("helping your cause. With their help, your counterterrorism", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 200)
+            draw_text("efforts have seen some success.", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 250)
         else:
-            draw_text("Due to your improved relations with EU members, they have committed to", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 50)
-            draw_text("helping your cause. With your newfound allies, along with the Turkish", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 100)
-            draw_text("military, your counterterrorism efforts have seen great success!", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 150)
-            draw_text("Your citizens are more confident in their safety than ever before.", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 200)
+            draw_text("Due to your improved relations with EU members, they have", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 50)
+            draw_text("committed to helping your cause. With your newfound allies,", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 100)
+            draw_text("along with the Turkish military, your counterterrorism", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 150)
+            draw_text("efforts have seen great success! Your citizens are more", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 200)
+            draw_text("confident in their safety than ever before.", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 250)
+
     elif turkey.SPENDING:
-        draw_text("Because you have already chosen to reduce spending, your military is", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 50)
-        draw_text("not at full strength. Because of this, your military has been unable to", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 100)
-        draw_text("defend against multiple PPK demonstrations and attacks.", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 150)
+        draw_text("Because you have already chosen to reduce spending, your", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 50)
+        draw_text("military is not at full strength. Because of this, your", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 100)
+        draw_text("military has been unable to defend against multiple PPK", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 150)
+        draw_text("demonstrations and attacks.", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 200)
     else:
-        draw_text("You have chosen to try to put a stop to the terrorist demonstrations in Turkey", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 50)
-        draw_text("by strengthening the military. Although there has been definite improvements, ", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 100)
-        draw_text("the PKK is still a dominant force. The citizens of Turkey are feel more secure.", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 150)
+        draw_text("You have chosen to try to put a stop to the terrorist", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 50)
+        draw_text("demonstrations in Turkey by strengthening the military.", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 100)
+        draw_text("Although there has been definite improvements, the PKK is still", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 150)
+        draw_text("a dominant force. The citizens of Turkey are feel more secure.", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 200)
+
 
     button1_rect = pygame.Rect(SCREEN_WIDTH // 4 - OPT1_WIDTH // 2, SCREEN_HEIGHT // 2 - 50, OPT1_WIDTH, BUTTON_HEIGHT)
     
@@ -1290,13 +1296,13 @@ def display_causes_result(screen):
         draw_text("between Turkey and Syria and implementing counter-radicalization", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 350)
         draw_text("programs.", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 400)
     else:
-        draw_text("You chose to seek out the causes of terrorism in Turkey to counter Islamic extremism.", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 50)
-        draw_text("Due to the complex relationship with Syria, seeking out terrorism will difficult", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 100)
-        draw_text("without their support. Turkey's goal to combat terrorism at its root could be challenged", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 150)
-        draw_text("by Syria's unwillingness to assit efforts. However, Turkey's determination will help", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 200)
-        draw_text("slightly prevent terrorism growth.", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 250)
-        draw_text("", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 300)
-        draw_text("", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 350)
+        draw_text("You chose to seek out the causes of terrorism in Turkey to", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 50)
+        draw_text("counter Islamic extremism. Due to the complex relationship with", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 100)
+        draw_text("Syria, seeking out terrorism will be difficult without their", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 150)
+        draw_text("support. Turkey's goal to combat terrorism at its root could be", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 200)
+        draw_text("challenged by Syria's unwillingness to assit efforts. However,", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 250)
+        draw_text("Turkey's determination will help slightly prevent terrorism", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 300)
+        draw_text("growth.", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 350)
 
     button1_rect = pygame.Rect(SCREEN_WIDTH // 4 - OPT1_WIDTH // 2, SCREEN_HEIGHT // 2 - 50, OPT1_WIDTH, BUTTON_HEIGHT)
     
