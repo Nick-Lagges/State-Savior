@@ -600,10 +600,11 @@ def display_UN_result(screen):
         draw_text("involved, they have made a statement promising future support", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 250)
         draw_text("for the refugees in Turkey.", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 300)
     elif turkey.WALK:
-        draw_text("You have decided to address the refugee crisis by consulting the United Nations. Since you", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 50)
-        draw_text("have previously walked away from attempts to join the European Union, EU countries in the", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 100)
-        draw_text("UN have been less responsive to Turkey's calls for aid. You hope other opportunities can help", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 150)
-        draw_text("improve the well being of the refugees, but for now their quality of life only slightly improves.", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 200)
+        draw_text("You have decided to address the refugee crisis by consulting", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 50)
+        draw_text("the United Nations. Since you have previously walked away from", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 100)
+        draw_text(" attempts to join the European Union, EU countries in the UN", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 150)
+        draw_text("have been less responsive to Turkey's calls for aid. You hope", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 200)
+        draw_text("other opportunities can help improve the well being of the refugees, but for now their quality of life only slightly improves.", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 250)
     else:
         draw_text("You have decided to address the refugee crisis by consulting the United Nations. Due to", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 50)
         draw_text("Turkey's complex relationship with the UN, they have been slightly receptive to your call", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 100)
@@ -1329,8 +1330,8 @@ def display_main_screen(screen):
                 sys.exit()
 
 # Set up the screen
-screen = pygame.display.set_mode((1024, 768))
-#screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT), pygame.FULLSCREEN)
+#screen = pygame.display.set_mode((1024, 768))
+screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT), pygame.FULLSCREEN)
 pygame.display.set_caption("State Savior")
 
 # Main loop
