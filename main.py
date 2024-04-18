@@ -271,7 +271,7 @@ def display_end_of_game(screen):
 
 def display_economic(screen):
     screen.fill(WHITE)
-    background = pygame.image.load("economyDown.jpg").convert()
+    background = pygame.image.load("rising.jpg").convert()
     screen.blit(background, (0,0))
     
     draw_text("How should the country proceed?", FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
@@ -305,7 +305,7 @@ def display_economic(screen):
 def display_economic_stim(screen):
     screen.fill(WHITE)
 
-    background = pygame.image.load("economyDown.jpg").convert()
+    background = pygame.image.load("rising.jpg").convert()
     screen.blit(background, (0,0))
     
     draw_text("How do you want to take stimulus measures?", FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
@@ -338,7 +338,7 @@ def display_economic_stim(screen):
 
 def display_investment_result(screen):
     screen.fill(WHITE)
-    background = pygame.image.load("economyDown.jpg").convert()
+    background = pygame.image.load("economyUp.jpg").convert()
     screen.blit(background, (0,0))
     
     draw_text("You increased investment into the economy, stimulating growth in", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 50)
@@ -371,7 +371,7 @@ def display_investment_result(screen):
 
 def display_cash_result(screen):
     screen.fill(WHITE)
-    background = pygame.image.load("economyDown.jpg").convert()
+    background = pygame.image.load("economyUp.jpg").convert()
     screen.blit(background, (0,0))
     
     draw_text("You made direct cash transfers to citizens, stimulating economic", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 50)
@@ -403,7 +403,7 @@ def display_cash_result(screen):
 
 def display_economic_aust(screen):
     screen.fill(WHITE)
-    background = pygame.image.load("economyDown.jpg").convert()
+    background = pygame.image.load("rising.jpg").convert()
     screen.blit(background, (0,0))
     
     draw_text("How do you want to take austerity measures?", FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
@@ -473,7 +473,7 @@ def display_reduce_spend_result(screen):
 
 def display_tax_result(screen):
     screen.fill(WHITE)
-    background = pygame.image.load("economyDown.jpg").convert()
+    background = pygame.image.load("tax.jpg").convert()
     screen.blit(background, (0,0))
 
     turkey.TAXES = True
@@ -488,7 +488,7 @@ def display_tax_result(screen):
     draw_text("demand of the economy. However, governmental budget deficits have", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 150)
     draw_text("been cut and inflation is at a more stable level.", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 200)
 
-    button1_rect = pygame.Rect(SCREEN_WIDTH // 4 - OPT1_WIDTH // 2, SCREEN_HEIGHT // 2 - 50, OPT1_WIDTH, BUTTON_HEIGHT)
+    button1_rect = pygame.Rect(SCREEN_WIDTH -50 - BUTTON_WIDTH // 2, SCREEN_HEIGHT -10, BUTTON_WIDTH -50, BUTTON_HEIGHT -50)
     
     NEXT = Button(FONT, GREEN, button1_rect.x, button1_rect.y, BUTTON_WIDTH -50, BUTTON_HEIGHT -50, "Next")
    
@@ -511,7 +511,7 @@ def display_tax_result(screen):
 
 def display_refugee(screen):
     screen.fill(WHITE)
-    background = pygame.image.load("economyDown.jpg").convert()
+    background = pygame.image.load("refugee.jpg").convert()
     screen.blit(background, (0,0))
     
     draw_text("How should the country proceed?", FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
@@ -520,7 +520,7 @@ def display_refugee(screen):
     button2_rect = pygame.Rect(3 * SCREEN_WIDTH // 4 - OPT2_WIDTH // 2, SCREEN_HEIGHT // 2 - 50, OPT2_WIDTH, BUTTON_HEIGHT)
     
     opt1 = Button(OPT_FONT, RED, button1_rect.x, button1_rect.y, OPT1_WIDTH, BUTTON_HEIGHT, "International Cooperation")
-    opt2 = Button(OPT_FONT, GREEN, button2_rect.x, button2_rect.y, OPT2_WIDTH, BUTTON_HEIGHT, "Internal Empowerment")
+    opt2 = Button(OPT_FONT, GREEN, button2_rect.x, button2_rect.y, OPT2_WIDTH, BUTTON_HEIGHT, "Internal Restructuring")
 
     opt1.draw(screen)
     opt2.draw(screen)
@@ -537,14 +537,14 @@ def display_refugee(screen):
                 if is_button_clicked(mouse_pos, button1_rect):
                     display_international_coop(screen)
                 elif is_button_clicked(mouse_pos, button2_rect):
-                    display_internal_emp(screen)
+                    display_internal(screen)
             elif event.type == KEYDOWN and event.key == K_ESCAPE:
                 pygame.quit()
                 sys.exit()
 
 def display_international_coop(screen):
     screen.fill(WHITE)
-    background = pygame.image.load("economyDown.jpg").convert()
+    background = pygame.image.load("refugee.jpg").convert()
     screen.blit(background, (0,0))
     
     draw_text("How should Turkey proceed?", FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
@@ -609,7 +609,7 @@ def display_UN_result(screen):
         draw_text("the United Nations. Due to Turkey's complex relationship with", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 100)
         draw_text("the UN, they have been slightly receptive to your call for", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 150)
         draw_text("help. They have supplied aid, but not as much as necessary to", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 200)
-        draw_text("greatly improve refuge equality of life.", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 200)        
+        draw_text("greatly improve refuge equality of life.", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 250)        
 
     button1_rect = pygame.Rect(SCREEN_WIDTH -50 - BUTTON_WIDTH // 2, SCREEN_HEIGHT -10, BUTTON_WIDTH -50, BUTTON_HEIGHT -50)
     
@@ -634,7 +634,7 @@ def display_UN_result(screen):
 
 def display_syrian_result(screen):
     screen.fill(WHITE)
-    background = pygame.image.load("economyDown.jpg").convert()
+    background = pygame.image.load("syria.png").convert()
     screen.blit(background, (0,0))
 
     turkey.SYRIA = True
@@ -676,14 +676,14 @@ def display_syrian_result(screen):
                 pygame.quit()
                 sys.exit()
 
-def display_internal_emp(screen):
+def display_internal(screen):
     screen.fill(WHITE)
-    background = pygame.image.load("economyDown.jpg").convert()
+    background = pygame.image.load("refugee.jpg").convert()
     screen.blit(background, (0,0))
 
     turkey.INTERNAL = True
     
-    draw_text("How should Turkey support refugees?", FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
+    draw_text("How should Turkey deal with refugee issues?", FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
     
     button1_rect = pygame.Rect(SCREEN_WIDTH // 4 - OPT1_WIDTH // 2, SCREEN_HEIGHT // 2 - 50, OPT1_WIDTH, BUTTON_HEIGHT)
     button2_rect = pygame.Rect(3 * SCREEN_WIDTH // 4 - OPT2_WIDTH // 2, SCREEN_HEIGHT // 2 - 50, OPT2_WIDTH, BUTTON_HEIGHT)
@@ -713,13 +713,13 @@ def display_internal_emp(screen):
 
 def display_opportunity_result(screen):
     screen.fill(WHITE)
-    background = pygame.image.load("economyDown.jpg").convert()
+    background = pygame.image.load("refugeeOpp.jpg").convert()
     screen.blit(background, (0,0))
 
     turkey.QUALITY_OF_LIFE += 5
     turkey.INFRASTRUCTURE += 2
     
-    
+    #CHANGE
     draw_text("You decided to improve opportunities for refugees. This has led to", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 50)
     draw_text("improvements in education and the job market. However, word of", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 100)
     draw_text("these improved opportunities has spread, attracting more refugees", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 150)
@@ -749,7 +749,7 @@ def display_opportunity_result(screen):
 
 def display_limit_result(screen):
     screen.fill(WHITE)
-    background = pygame.image.load("economyDown.jpg").convert()
+    background = pygame.image.load("limit.jpg").convert()
     screen.blit(background, (0,0))
 
     turkey.QUALITY_OF_LIFE += 5
@@ -788,7 +788,7 @@ def display_limit_result(screen):
 
 def display_EU(screen):
     screen.fill(WHITE)
-    background = pygame.image.load("economyDown.jpg").convert()
+    background = pygame.image.load("eu.jpg").convert()
     screen.blit(background, (0,0))
     
     draw_text("How should the country proceed?", FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
@@ -821,7 +821,7 @@ def display_EU(screen):
 
 def display_reform(screen):
     screen.fill(WHITE)
-    background = pygame.image.load("economyDown.jpg").convert()
+    background = pygame.image.load("eu.jpg").convert()
     screen.blit(background, (0,0))
     
     draw_text("How should the country reforms?", FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
@@ -854,7 +854,7 @@ def display_reform(screen):
 
 def display_protect_result(screen):
     screen.fill(WHITE)
-    background = pygame.image.load("economyDown.jpg").convert()
+    background = pygame.image.load("hr.jpg").convert()
     screen.blit(background, (0,0))
 
     turkey.QUALITY_OF_LIFE += 8
@@ -891,7 +891,7 @@ def display_protect_result(screen):
 
 def display_democracy_result(screen):
     screen.fill(WHITE)
-    background = pygame.image.load("economyDown.jpg").convert()
+    background = pygame.image.load("democracy.jpg").convert()
     screen.blit(background, (0,0))
 
     turkey.POLITICAL_STABILITY += 8
@@ -927,7 +927,7 @@ def display_democracy_result(screen):
 
 def display_negotiate(screen):
     screen.fill(WHITE)
-    background = pygame.image.load("economyDown.jpg").convert()
+    background = pygame.image.load("eu.jpg").convert()
     screen.blit(background, (0,0))
     
     draw_text("How should Turkey negotiate with the UN?", FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
@@ -960,7 +960,7 @@ def display_negotiate(screen):
 
 def display_alliances_result(screen):
     screen.fill(WHITE)
-    background = pygame.image.load("economyDown.jpg").convert()
+    background = pygame.image.load("alliance.jpg").convert()
     screen.blit(background, (0,0))
 
     turkey.ALLIES = True
@@ -997,7 +997,7 @@ def display_alliances_result(screen):
 
 def display_alternatives_result(screen):
     screen.fill(WHITE)
-    background = pygame.image.load("economyDown.jpg").convert()
+    background = pygame.image.load("noEU.png").convert()
     screen.blit(background, (0,0))
 
     turkey.WALK = True
@@ -1033,7 +1033,7 @@ def display_alternatives_result(screen):
 
 def display_defense(screen):
     screen.fill(WHITE)
-    background = pygame.image.load("economyDown.jpg").convert()
+    background = pygame.image.load("defense.jpg").convert()
     screen.blit(background, (0,0))
     
     draw_text("How should the country defend itself?", FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
@@ -1066,7 +1066,7 @@ def display_defense(screen):
 
 def display_relations(screen):
     screen.fill(WHITE)
-    background = pygame.image.load("economyDown.jpg").convert()
+    background = pygame.image.load("defense.jpg").convert()
     screen.blit(background, (0,0))
     
     draw_text("How should the country improve its relations?", FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
@@ -1101,7 +1101,7 @@ def display_relations(screen):
                 
 def display_cultural_result(screen):
     screen.fill(WHITE)
-    background = pygame.image.load("economyDown.jpg").convert()
+    background = pygame.image.load("culturalTies.jpeg").convert()
     screen.blit(background, (0,0))
 
     turkey.QUALITY_OF_LIFE += 2
@@ -1135,7 +1135,7 @@ def display_cultural_result(screen):
 
 def display_strengthen_econ_result(screen):
     screen.fill(WHITE)
-    background = pygame.image.load("economyDown.jpg").convert()
+    background = pygame.image.load("connectivity.jpg").convert()
     screen.blit(background, (0,0))
 
     turkey.ECONOMIC_STRENGTH += 4
@@ -1188,7 +1188,7 @@ def display_strengthen_econ_result(screen):
 
 def display_counterterrorism(screen):
     screen.fill(WHITE)
-    background = pygame.image.load("economyDown.jpg").convert()
+    background = pygame.image.load("defense.jpg").convert()
     screen.blit(background, (0,0))
     
     draw_text("How should the country counter terrorism?", FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
@@ -1221,7 +1221,7 @@ def display_counterterrorism(screen):
 
 def display_military_result(screen):
     screen.fill(WHITE)
-    background = pygame.image.load("economyDown.jpg").convert()
+    background = pygame.image.load("military.jpg").convert()
     screen.blit(background, (0,0))
 
     turkey.DEFENSE += 8
@@ -1270,7 +1270,7 @@ def display_military_result(screen):
 
 def display_causes_result(screen):
     screen.fill(WHITE)
-    background = pygame.image.load("economyDown.jpg").convert()
+    background = pygame.image.load("terrorism.jpg").convert()
     screen.blit(background, (0,0))
 
     turkey.DIPLOMACY -= 3
