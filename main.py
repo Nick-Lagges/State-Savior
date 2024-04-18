@@ -348,12 +348,11 @@ def display_investment_result(screen):
 
     turkey.ECONOMIC_STRENGTH += 5
     
-    button1_rect = pygame.Rect(SCREEN_WIDTH // 4 - OPT1_WIDTH // 2, SCREEN_HEIGHT // 2 - 50, OPT1_WIDTH, BUTTON_HEIGHT)
-    button2_rect = pygame.Rect(3 * SCREEN_WIDTH // 4 - OPT2_WIDTH // 2, SCREEN_HEIGHT // 2 - 50, OPT2_WIDTH, BUTTON_HEIGHT)
+    button1_rect = pygame.Rect(SCREEN_WIDTH -50 - BUTTON_WIDTH // 2, SCREEN_HEIGHT -10, BUTTON_WIDTH -50, BUTTON_HEIGHT -50)
     
-    opt1 = Button(OPT_FONT, RED, button1_rect.x, button1_rect.y, OPT1_WIDTH, BUTTON_HEIGHT, "Next")
-
-    opt1.draw(screen)
+    NEXT = Button(FONT, GREEN, button1_rect.x, button1_rect.y, BUTTON_WIDTH -50, BUTTON_HEIGHT -50, "Next")
+   
+    NEXT.draw(screen)
     
     pygame.display.update()
     
@@ -380,12 +379,11 @@ def display_cash_result(screen):
 
     turkey.ECONOMIC_STRENGTH += 5
     
-    button1_rect = pygame.Rect(SCREEN_WIDTH // 4 - OPT1_WIDTH // 2, SCREEN_HEIGHT // 2 - 50, OPT1_WIDTH, BUTTON_HEIGHT)
-    button2_rect = pygame.Rect(3 * SCREEN_WIDTH // 4 - OPT2_WIDTH // 2, SCREEN_HEIGHT // 2 - 50, OPT2_WIDTH, BUTTON_HEIGHT)
+    button1_rect = pygame.Rect(SCREEN_WIDTH -50 - BUTTON_WIDTH // 2, SCREEN_HEIGHT -10, BUTTON_WIDTH -50, BUTTON_HEIGHT -50)
     
-    opt1 = Button(OPT_FONT, RED, button1_rect.x, button1_rect.y, OPT1_WIDTH, BUTTON_HEIGHT, "Next")
-
-    opt1.draw(screen)
+    NEXT = Button(FONT, GREEN, button1_rect.x, button1_rect.y, BUTTON_WIDTH -50, BUTTON_HEIGHT -50, "Next")
+   
+    NEXT.draw(screen)
     
     pygame.display.update()
     
@@ -452,11 +450,11 @@ def display_reduce_spend_result(screen):
     draw_text("governmental budget issues, improved investor confidence, and more", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 200)
     draw_text("stable inflation.", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 250)
 
-    button1_rect = pygame.Rect(SCREEN_WIDTH // 4 - OPT1_WIDTH // 2, SCREEN_HEIGHT // 2 - 50, OPT1_WIDTH, BUTTON_HEIGHT)
+    button1_rect = pygame.Rect(SCREEN_WIDTH -50 - BUTTON_WIDTH // 2, SCREEN_HEIGHT -10, BUTTON_WIDTH -50, BUTTON_HEIGHT -50)
     
-    opt1 = Button(OPT_FONT, RED, button1_rect.x, button1_rect.y, OPT1_WIDTH, BUTTON_HEIGHT, "Next")
-
-    opt1.draw(screen)
+    NEXT = Button(FONT, GREEN, button1_rect.x, button1_rect.y, BUTTON_WIDTH -50, BUTTON_HEIGHT -50, "Next")
+   
+    NEXT.draw(screen)
     
     pygame.display.update()
     
@@ -492,9 +490,9 @@ def display_tax_result(screen):
 
     button1_rect = pygame.Rect(SCREEN_WIDTH // 4 - OPT1_WIDTH // 2, SCREEN_HEIGHT // 2 - 50, OPT1_WIDTH, BUTTON_HEIGHT)
     
-    opt1 = Button(OPT_FONT, RED, button1_rect.x, button1_rect.y, OPT1_WIDTH, BUTTON_HEIGHT, "Next")
-
-    opt1.draw(screen)
+    NEXT = Button(FONT, GREEN, button1_rect.x, button1_rect.y, BUTTON_WIDTH -50, BUTTON_HEIGHT -50, "Next")
+   
+    NEXT.draw(screen)
     
     pygame.display.update()
     
@@ -613,11 +611,11 @@ def display_UN_result(screen):
         draw_text("help. They have supplied aid, but not as much as necessary to", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 200)
         draw_text("greatly improve refuge equality of life.", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 200)        
 
-    button1_rect = pygame.Rect(SCREEN_WIDTH // 4 - OPT1_WIDTH // 2, SCREEN_HEIGHT // 2 - 50, OPT1_WIDTH, BUTTON_HEIGHT)
+    button1_rect = pygame.Rect(SCREEN_WIDTH -50 - BUTTON_WIDTH // 2, SCREEN_HEIGHT -10, BUTTON_WIDTH -50, BUTTON_HEIGHT -50)
     
-    opt1 = Button(OPT_FONT, RED, button1_rect.x, button1_rect.y, OPT1_WIDTH, BUTTON_HEIGHT, "Next")
-
-    opt1.draw(screen)
+    NEXT = Button(FONT, GREEN, button1_rect.x, button1_rect.y, BUTTON_WIDTH -50, BUTTON_HEIGHT -50, "Next")
+   
+    NEXT.draw(screen)
     
     pygame.display.update()
     
@@ -657,11 +655,11 @@ def display_syrian_result(screen):
         draw_text("strains in your relationship with neighboring countries have", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 200)
         draw_text("slowed down results.", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 250)
         
-    button1_rect = pygame.Rect(SCREEN_WIDTH // 4 - OPT1_WIDTH // 2, SCREEN_HEIGHT // 2 - 50, OPT1_WIDTH, BUTTON_HEIGHT)
+    button1_rect = pygame.Rect(SCREEN_WIDTH -50 - BUTTON_WIDTH // 2, SCREEN_HEIGHT -10, BUTTON_WIDTH -50, BUTTON_HEIGHT -50)
     
-    opt1 = Button(OPT_FONT, RED, button1_rect.x, button1_rect.y, OPT1_WIDTH, BUTTON_HEIGHT, "Next")
-
-    opt1.draw(screen)
+    NEXT = Button(FONT, GREEN, button1_rect.x, button1_rect.y, BUTTON_WIDTH -50, BUTTON_HEIGHT -50, "Next")
+   
+    NEXT.draw(screen)
     
     pygame.display.update()
     
@@ -728,11 +726,11 @@ def display_opportunity_result(screen):
     draw_text("to seek asylum in Turkey, putting a strain on resources, and", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 200)
     draw_text("exacerbating the refugee crisis.", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 250)
     
-    button1_rect = pygame.Rect(SCREEN_WIDTH // 4 - OPT1_WIDTH // 2, SCREEN_HEIGHT // 2 - 50, OPT1_WIDTH, BUTTON_HEIGHT)
+    button1_rect = pygame.Rect(SCREEN_WIDTH -50 - BUTTON_WIDTH // 2, SCREEN_HEIGHT -10, BUTTON_WIDTH -50, BUTTON_HEIGHT -50)
     
-    opt1 = Button(OPT_FONT, RED, button1_rect.x, button1_rect.y, OPT1_WIDTH, BUTTON_HEIGHT, "Next")
-
-    opt1.draw(screen)
+    NEXT = Button(FONT, GREEN, button1_rect.x, button1_rect.y, BUTTON_WIDTH -50, BUTTON_HEIGHT -50, "Next")
+   
+    NEXT.draw(screen)
     
     pygame.display.update()
     
@@ -767,11 +765,11 @@ def display_limit_result(screen):
     draw_text("decided to limit the number of refugees allowed into Turkey,", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 350)
     draw_text("neighboring countries, along with the UN, have been upset by this.", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 400)
     
-    button1_rect = pygame.Rect(SCREEN_WIDTH // 4 - OPT1_WIDTH // 2, SCREEN_HEIGHT // 2 - 50, OPT1_WIDTH, BUTTON_HEIGHT)
+    button1_rect = pygame.Rect(SCREEN_WIDTH -50 - BUTTON_WIDTH // 2, SCREEN_HEIGHT -10, BUTTON_WIDTH -50, BUTTON_HEIGHT -50)
     
-    opt1 = Button(OPT_FONT, RED, button1_rect.x, button1_rect.y, OPT1_WIDTH, BUTTON_HEIGHT, "Next")
-
-    opt1.draw(screen)
+    NEXT = Button(FONT, GREEN, button1_rect.x, button1_rect.y, BUTTON_WIDTH -50, BUTTON_HEIGHT -50, "Next")
+   
+    NEXT.draw(screen)
     
     pygame.display.update()
     
@@ -870,11 +868,11 @@ def display_protect_result(screen):
     draw_text("of your reforms have faced backlash from domestic stakeholders,", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 200)
     draw_text("slowing down progress.", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 250)
 
-    button1_rect = pygame.Rect(SCREEN_WIDTH // 4 - OPT1_WIDTH // 2, SCREEN_HEIGHT // 2 - 50, OPT1_WIDTH, BUTTON_HEIGHT)
+    button1_rect = pygame.Rect(SCREEN_WIDTH -50 - BUTTON_WIDTH // 2, SCREEN_HEIGHT -10, BUTTON_WIDTH -50, BUTTON_HEIGHT -50)
     
-    opt1 = Button(OPT_FONT, RED, button1_rect.x, button1_rect.y, OPT1_WIDTH, BUTTON_HEIGHT, "Next")
-
-    opt1.draw(screen)
+    NEXT = Button(FONT, GREEN, button1_rect.x, button1_rect.y, BUTTON_WIDTH -50, BUTTON_HEIGHT -50, "Next")
+   
+    NEXT.draw(screen)
     
     pygame.display.update()
     
@@ -906,11 +904,11 @@ def display_democracy_result(screen):
     draw_text("obstacles, you have gained the trust of the UN and promoted", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 200)
     draw_text("domestic stability.", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 250)
 
-    button1_rect = pygame.Rect(SCREEN_WIDTH // 4 - OPT1_WIDTH // 2, SCREEN_HEIGHT // 2 - 50, OPT1_WIDTH, BUTTON_HEIGHT)
+    button1_rect = pygame.Rect(SCREEN_WIDTH -50 - BUTTON_WIDTH // 2, SCREEN_HEIGHT -10, BUTTON_WIDTH -50, BUTTON_HEIGHT -50)
     
-    opt1 = Button(OPT_FONT, RED, button1_rect.x, button1_rect.y, OPT1_WIDTH, BUTTON_HEIGHT, "Next")
-
-    opt1.draw(screen)
+    NEXT = Button(FONT, GREEN, button1_rect.x, button1_rect.y, BUTTON_WIDTH -50, BUTTON_HEIGHT -50, "Next")
+   
+    NEXT.draw(screen)
     
     pygame.display.update()
     
@@ -976,11 +974,11 @@ def display_alliances_result(screen):
     draw_text("practices, you've made commitments to change key issues regarding human rights. This balanced", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 100)
     draw_text("approach has improved your standing with the EU, while keeping political opponents relatively at bay.", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 150)
 
-    button1_rect = pygame.Rect(SCREEN_WIDTH // 4 - OPT1_WIDTH // 2, SCREEN_HEIGHT // 2 - 50, OPT1_WIDTH, BUTTON_HEIGHT)
+    button1_rect = pygame.Rect(SCREEN_WIDTH -50 - BUTTON_WIDTH // 2, SCREEN_HEIGHT -10, BUTTON_WIDTH -50, BUTTON_HEIGHT -50)
     
-    opt1 = Button(OPT_FONT, RED, button1_rect.x, button1_rect.y, OPT1_WIDTH, BUTTON_HEIGHT, "Next")
-
-    opt1.draw(screen)
+    NEXT = Button(FONT, GREEN, button1_rect.x, button1_rect.y, BUTTON_WIDTH -50, BUTTON_HEIGHT -50, "Next")
+   
+    NEXT.draw(screen)
     
     pygame.display.update()
     
@@ -1012,11 +1010,11 @@ def display_alternatives_result(screen):
     draw_text("the internatinoal community. This durastic policy choice has sparked opposition to", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 150)
     draw_text("criticize your decision making.", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 200)
 
-    button1_rect = pygame.Rect(SCREEN_WIDTH // 4 - OPT1_WIDTH // 2, SCREEN_HEIGHT // 2 - 50, OPT1_WIDTH, BUTTON_HEIGHT)
+    button1_rect = pygame.Rect(SCREEN_WIDTH -50 - BUTTON_WIDTH // 2, SCREEN_HEIGHT -10, BUTTON_WIDTH -50, BUTTON_HEIGHT -50)
     
-    opt1 = Button(OPT_FONT, RED, button1_rect.x, button1_rect.y, OPT1_WIDTH, BUTTON_HEIGHT, "Next")
-
-    opt1.draw(screen)
+    NEXT = Button(FONT, GREEN, button1_rect.x, button1_rect.y, BUTTON_WIDTH -50, BUTTON_HEIGHT -50, "Next")
+   
+    NEXT.draw(screen)
     
     pygame.display.update()
     
@@ -1114,11 +1112,11 @@ def display_cultural_result(screen):
     draw_text("neighboring countries. Although this doesn't give immediate results,", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 100)
     draw_text("this has improved your relationship with neighboring countries.", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 150)
 
-    button1_rect = pygame.Rect(SCREEN_WIDTH // 4 - OPT1_WIDTH // 2, SCREEN_HEIGHT // 2 - 50, OPT1_WIDTH, BUTTON_HEIGHT)
+    button1_rect = pygame.Rect(SCREEN_WIDTH -50 - BUTTON_WIDTH // 2, SCREEN_HEIGHT -10, BUTTON_WIDTH -50, BUTTON_HEIGHT -50)
     
-    opt1 = Button(OPT_FONT, RED, button1_rect.x, button1_rect.y, OPT1_WIDTH, BUTTON_HEIGHT, "Next")
-
-    opt1.draw(screen)
+    NEXT = Button(FONT, GREEN, button1_rect.x, button1_rect.y, BUTTON_WIDTH -50, BUTTON_HEIGHT -50, "Next")
+   
+    NEXT.draw(screen)
     
     pygame.display.update()
     
@@ -1167,11 +1165,11 @@ def display_strengthen_econ_result(screen):
         draw_text("However, the issues your neighbors are facing, the economy has", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 200)
         draw_text("not improved to the desired extent.", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 250)
 
-    button1_rect = pygame.Rect(SCREEN_WIDTH // 4 - OPT1_WIDTH // 2, SCREEN_HEIGHT // 2 - 50, OPT1_WIDTH, BUTTON_HEIGHT)
+    button1_rect = pygame.Rect(SCREEN_WIDTH -50 - BUTTON_WIDTH // 2, SCREEN_HEIGHT -10, BUTTON_WIDTH -50, BUTTON_HEIGHT -50)
     
-    opt1 = Button(OPT_FONT, RED, button1_rect.x, button1_rect.y, OPT1_WIDTH, BUTTON_HEIGHT, "Next")
-
-    opt1.draw(screen)
+    NEXT = Button(FONT, GREEN, button1_rect.x, button1_rect.y, BUTTON_WIDTH -50, BUTTON_HEIGHT -50, "Next")
+   
+    NEXT.draw(screen)
     
     pygame.display.update()
     
@@ -1249,11 +1247,11 @@ def display_military_result(screen):
         draw_text("by strengthening the military. Although there has been definite improvements, ", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 100)
         draw_text("the PKK is still a dominant force. The citizens of Turkey are feel more secure.", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 150)
 
-    button1_rect = pygame.Rect(SCREEN_WIDTH // 4 - OPT1_WIDTH // 2, SCREEN_HEIGHT // 2 - 50, OPT1_WIDTH, BUTTON_HEIGHT)
+    button1_rect = pygame.Rect(SCREEN_WIDTH -50 - BUTTON_WIDTH // 2, SCREEN_HEIGHT -10, BUTTON_WIDTH -50, BUTTON_HEIGHT -50)
     
-    opt1 = Button(OPT_FONT, RED, button1_rect.x, button1_rect.y, OPT1_WIDTH, BUTTON_HEIGHT, "Next")
-
-    opt1.draw(screen)
+    NEXT = Button(FONT, GREEN, button1_rect.x, button1_rect.y, BUTTON_WIDTH -50, BUTTON_HEIGHT -50, "Next")
+   
+    NEXT.draw(screen)
     
     pygame.display.update()
     
@@ -1296,11 +1294,11 @@ def display_causes_result(screen):
         draw_text("", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 300)
         draw_text("", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 350)
 
-    button1_rect = pygame.Rect(SCREEN_WIDTH // 4 - OPT1_WIDTH // 2, SCREEN_HEIGHT // 2 - 50, OPT1_WIDTH, BUTTON_HEIGHT)
+    button1_rect = pygame.Rect(SCREEN_WIDTH -50 - BUTTON_WIDTH // 2, SCREEN_HEIGHT -10, BUTTON_WIDTH -50, BUTTON_HEIGHT -50)
     
-    opt1 = Button(OPT_FONT, RED, button1_rect.x, button1_rect.y, OPT1_WIDTH, BUTTON_HEIGHT, "Next")
-
-    opt1.draw(screen)
+    NEXT = Button(FONT, GREEN, button1_rect.x, button1_rect.y, BUTTON_WIDTH -50, BUTTON_HEIGHT -50, "Next")
+   
+    NEXT.draw(screen)
     
     pygame.display.update()
     
