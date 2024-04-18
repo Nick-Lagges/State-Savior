@@ -972,10 +972,11 @@ def display_alliances_result(screen):
     turkey.POLITICAL_STABILITY += 2
     turkey.QUALITY_OF_LIFE -= 2
     
-    draw_text("You have built back alliances with the EU members through negotiations. While maintaining some traditional", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 50)
-    draw_text("practices, you've made commitments to change key issues regarding human rights. This balanced", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 100)
-    draw_text("approach has improved your standing with the EU, while keeping political opponents relatively at bay.", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 150)
-
+    draw_text("You have built back alliances with the EU members through", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 50)
+    draw_text("negotiations. While maintaining some traditional practices, you've", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 100)
+    draw_text("made commitments to change key issues regarding human rights. This", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 150)
+    draw_text("balanced approach has improved your standing with the EU, while", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 200)
+    draw_text("keeping political opponents relatively at bay.", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 250)
     button1_rect = pygame.Rect(SCREEN_WIDTH // 4 - OPT1_WIDTH // 2, SCREEN_HEIGHT // 2 - 50, OPT1_WIDTH, BUTTON_HEIGHT)
     
     opt1 = Button(OPT_FONT, RED, button1_rect.x, button1_rect.y, OPT1_WIDTH, BUTTON_HEIGHT, "Next")
@@ -1007,10 +1008,11 @@ def display_alternatives_result(screen):
     turkey.DIPLOMACY += 2
     turkey.POLITICAL_STABILITY += 3
     
-    draw_text("You have decided to step away from the EU and explore alternatives. Although this", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 50)
-    draw_text("allows for some more innovation and flexibility, this decision has put you at odds with", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 100)
-    draw_text("the internatinoal community. This durastic policy choice has sparked opposition to", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 150)
-    draw_text("criticize your decision making.", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 200)
+    draw_text("You have decided to step away from the EU and explore alternatives.", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 50)
+    draw_text("Although this allows for some more innovation and flexibility, this", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 100)
+    draw_text("decision has put you at odds with the international community. This", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 150)
+    draw_text("drastic policy choice has sparked opposition to criticize your", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 200)
+    draw_text("decision making.", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 250)
 
     button1_rect = pygame.Rect(SCREEN_WIDTH // 4 - OPT1_WIDTH // 2, SCREEN_HEIGHT // 2 - 50, OPT1_WIDTH, BUTTON_HEIGHT)
     
