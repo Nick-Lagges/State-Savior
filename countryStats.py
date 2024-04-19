@@ -22,3 +22,22 @@ class Country:
         self.INVESTMENT = investment
         self.SYRIA = syria
         self.SPENDING = spending
+        self.CHOICES = []
+
+    def reset(self):
+        self.ECONOMIC_STRENGTH = 60
+        self.QUALITY_OF_LIFE = 55
+        self.POLITICAL_STABILITY = 45
+        self.DIPLOMACY = 55
+        self.INFRASTRUCTURE = 60
+        self.DEFENSE = 57
+        self.REFORM = False
+        self.ALLIES = False
+        self.WALK = False
+        self.RELATIONS = False
+        self.INTERNAL = False
+        self.TAXES = False
+        self.INVESTMENT = False
+        self.SYRIA = False
+        self.SPENDING = False
+        self.CHOICES = []
