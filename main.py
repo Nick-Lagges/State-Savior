@@ -97,7 +97,7 @@ def is_button_clicked(pos, button_rect):
 def display_pre_screen(screen):
     screen.fill(WHITE)
     draw_text("Turkey is facing four main issues: A refugee crisis, economic,", FONT3, BLACK, screen, SCREEN_WIDTH // 2, 30)
-    draw_text("challenges, maintaining relaitons with the UN, and maintaining defense", FONT3, BLACK, screen, (SCREEN_WIDTH // 2) + 10, 60)
+    draw_text("challenges, maintaining relaitons with the EU, and maintaining defense", FONT3, BLACK, screen, (SCREEN_WIDTH // 2) + 10, 60)
     
     draw_text("Refugee Crisis: ", FONT, BLACK, screen, SCREEN_WIDTH // 4, 100)
     draw_text("Turkey currently hosts the most refugees in the world at 3.6 million.", FONT2, BLACK, screen, SCREEN_WIDTH // 4, 125)
@@ -117,14 +117,14 @@ def display_pre_screen(screen):
     econPic = pygame.image.load("econSmall.jpg").convert()
     screen.blit(econPic, (675, 275))
 
-    draw_text("UN Relations: ", FONT, BLACK, screen, SCREEN_WIDTH // 4, SCREEN_HEIGHT - 300)
-    draw_text("Turkeys current relationship with the UN is complicated. Although Turkey", FONT2, BLACK, screen, SCREEN_WIDTH // 4, SCREEN_HEIGHT - 275)
-    draw_text("does participate in UN programs, tensions have been rising between the UN", FONT2, BLACK, screen, SCREEN_WIDTH // 4, SCREEN_HEIGHT - 250)
-    draw_text("and Turkey over policy dissagreements. The UN has become concerned with", FONT2, BLACK, screen, SCREEN_WIDTH // 4, SCREEN_HEIGHT - 225)
-    draw_text("human rights issues in Turkey, with Turkey coming under fire from the UN ", FONT2, BLACK, screen, SCREEN_WIDTH // 4, SCREEN_HEIGHT - 200)
+    draw_text("EU Relations: ", FONT, BLACK, screen, SCREEN_WIDTH // 4, SCREEN_HEIGHT - 300)
+    draw_text("Turkeys current relationship with the EU is complicated. Although Turkey", FONT2, BLACK, screen, SCREEN_WIDTH // 4, SCREEN_HEIGHT - 275)
+    draw_text("does participate in EU programs, tensions have been rising between the EU", FONT2, BLACK, screen, SCREEN_WIDTH // 4, SCREEN_HEIGHT - 250)
+    draw_text("and Turkey over policy dissagreements. The EU has become concerned with", FONT2, BLACK, screen, SCREEN_WIDTH // 4, SCREEN_HEIGHT - 225)
+    draw_text("human rights issues in Turkey, with Turkey coming under fire from the EU ", FONT2, BLACK, screen, SCREEN_WIDTH // 4, SCREEN_HEIGHT - 200)
     draw_text("because of a lack of freedom of expression, press, and assembly. Turkey has", FONT2, BLACK, screen, SCREEN_WIDTH // 4, SCREEN_HEIGHT - 175)
     draw_text("reportedly been restricting media access as well, all sparking concerns that", FONT2, BLACK, screen, SCREEN_WIDTH // 4, SCREEN_HEIGHT - 150)
-    draw_text("Turkey is not being complient with UN standards.", FONT2, BLACK, screen, SCREEN_WIDTH // 4, SCREEN_HEIGHT - 125)
+    draw_text("Turkey is not being complient with EU standards.", FONT2, BLACK, screen, SCREEN_WIDTH // 4, SCREEN_HEIGHT - 125)
     euPic = pygame.image.load("euSmall.jpg").convert()
     screen.blit(euPic, (175, 600)) 
     
@@ -653,7 +653,7 @@ def display_international_coop(screen):
 
 def display_UN_result(screen):
     screen.fill(WHITE)
-    background = pygame.image.load("EU.jpg").convert()
+    background = pygame.image.load("UN.jpg").convert()
     screen.blit(background, (0,0))
 
     if turkey.REFORM:
@@ -1027,7 +1027,7 @@ def display_negotiate(screen):
     background = pygame.image.load("eu.jpg").convert()
     screen.blit(background, (0,0))
     
-    draw_text("How should Turkey negotiate with the UN?", FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
+    draw_text("How should Turkey negotiate with the EU?", FONT, BLACK, screen, SCREEN_WIDTH // 2, 50)
     
     button1_rect = pygame.Rect(SCREEN_WIDTH // 4 - OPT1_WIDTH // 2, SCREEN_HEIGHT // 2 - 50, OPT1_WIDTH, BUTTON_HEIGHT)
     button2_rect = pygame.Rect(3 * SCREEN_WIDTH // 4 - OPT2_WIDTH // 2, SCREEN_HEIGHT // 2 - 50, OPT2_WIDTH, BUTTON_HEIGHT)
